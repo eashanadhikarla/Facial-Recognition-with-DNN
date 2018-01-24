@@ -16,23 +16,58 @@ Automated Docker Build
 The quickest way to getting started is to use our pre-built automated Docker build, which is available from bamos/openface. This does not require or use a locally checked out copy of OpenFace. To use on your images, share a directory between your host and the Docker container.
 
 ```
-docker pull bamos/openface
-docker run -p 9000:9000 -p 8000:8000 -t -i bamos/openface /bin/bash
-cd /root/openface
-./demos/compare.py images/examples/{lennon*,clapton*}
-./demos/classifier.py infer models/openface/celeb-classifier.nn4.small2.v1.pkl ./images/examples/carell.jpg
-./demos/web/start-servers.sh
+> docker pull bamos/openface
+> docker run -p 9000:9000 -p 8000:8000 -t -i bamos/openface /bin/bash
+> cd /root/openface
+> ./demos/compare.py images/examples/{lennon*,clapton*}
+> ./demos/classifier.py infer models/openface/celeb-classifier.nn4.small2.v1.pkl ./images/examples/carell.jpg
+> ./demos/web/start-servers.sh
 ```
 
 Building a Docker Container
 This builds a Docker container from a locally checked out copy of OpenFace, which will take about 2 hours on a modern machine. Be sure you have checked out the git submodules. Run the following commands from the openface directory.
 
 ```
-docker build -t openface .
-docker run -p 9000:9000 -p 8000:8000 -t -i openface /bin/bash
-cd /root/openface
-./run-tests.sh
-./demos/compare.py images/examples/{lennon*,clapton*}
-./demos/classifier.py infer models/openface/celeb-classifier.nn4.small2.v1.pkl ./images/examples/carell.jpg
-./demos/web/start-servers.sh
+> docker build -t openface .
+> docker run -p 9000:9000 -p 8000:8000 -t -i openface /bin/bash
+> cd /root/openface
+> ./run-tests.sh
+> ./demos/compare.py images/examples/{lennon*,clapton*}
+> ./demos/classifier.py infer models/openface/celeb-classifier.nn4.small2.v1.pkl ./images/examples/carell.jpg
+> ./demos/web/start-servers.sh
+```
+
+## Prerequisites
+
+Be sure you have checked out the submodules and downloaded the models as described above.
+
+1. This project uses python2 because of the opencv and dlib dependencies. Install the packages the Dockerfile uses with your package manager. With pip2, install numpy, pandas, scipy, scikit-learn, and scikit-image.
+1.Python2.7 
+  i.)  pip2
+  ii.) numpy
+  iii.)pandas
+  iv.) matplotlib
+2. OpenCV dependencies 
+3. Dlib Dependencies
+4. Docker
+5. scikit-learn
+6. scipy
+7. scikit-image
+
+8.Torch
+Install Torch from the instructions on their website. At this point, the command-line program th should be available in your shell. Install the dependencies with luarocks install $NAME, where $NAME is as listed below.
+
+* dpnn
+* nn
+* optim
+* csvigo
+* cutorch and cunn (only with CUDA)
+* fblualib (only for training a DNN)
+* tds (only for training a DNN)
+* torchx (only for training a DNN)
+* optnet (optional, only for training a DNN)
+
+These can all be installed with:
+```
+**for** NAME **in** dpnn nn optim optnet csvigo cutorch cunn fblualib torchx tds; **do** luarocks install $NAME; **done**
 ```
