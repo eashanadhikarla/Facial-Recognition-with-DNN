@@ -1,16 +1,4 @@
-## Facial-Recognition-with-Deep-Nueral-Networks • [ ![Build Status] [travis-image] ] [travis] [ ![Release] [release-image] ] [releases] [ ![License] [license-image] ] [license] [ ![Gitter] [gitter-image] ] [gitter]
-
-[travis-image]: https://travis-ci.org/cmusatyalab/openface.png?branch=master
-[travis]: http://travis-ci.org/cmusatyalab/openface
-
-[release-image]: http://img.shields.io/badge/release-0.2.1-blue.svg?style=flat
-[releases]: https://github.com/cmusatyalab/openface/releases
-
-[license-image]: http://img.shields.io/badge/license-Apache--2-blue.svg?style=flat
-[license]: LICENSE
-
-[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
-[gitter]: https://gitter.im/cmusatyalab/openface
+## Facial-Recognition-with-Deep-Nueral-Networks
 
 ![screen shot 2017-04-17 at 3 24 41 pm](https://user-images.githubusercontent.com/12654784/35335115-8f50c5a8-013a-11e8-8650-5ee8ae4a17a0.png)
 
