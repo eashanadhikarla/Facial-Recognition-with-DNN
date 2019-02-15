@@ -8,7 +8,7 @@
 
 While OpenFace is only a couple of years old, it’s been widely adopted because it offers levels of accuracy similar to facial recognition models found in private state-of-the-art systems such as Google’s FaceNet or Facebook’s DeepFace. What’s particularly nice about OpenFace, besides being open source, is that development of the model focused on real-time face recognition on mobile devices, so you can train a model with high accuracy with very little data on the fly.
 
-![openface.png](https://drive.google.com/open?id=1P6QaigCtpO71bB0ppPN29VXVDHTQxxjF/openface.png)
+![openface_diagram](https://user-images.githubusercontent.com/12654784/52827213-d72db980-3091-11e9-9240-84648a7f958f.png)
 
 * This demo does the full face recognition pipeline on every frame. In practice, object tracking like dlib's should be used once the face recognizer has predicted a face.
 
