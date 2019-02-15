@@ -1,5 +1,5 @@
 # Facial-Recognition-with-Deep-Nueral-Networks
-![screen shot 2017-04-17 at 3 24 41 pm](https://user-images.githubusercontent.com/12654784/35335115-8f50c5a8-013a-11e8-8650-5ee8ae4a17a0.png)
+![screen shot 2017-04-17 at 3 24 41 pm](https://user-images.githubusercontent.com/12654784/35335115-8f50c5a8-013a-11e8-8650-5ee8ae4a17a0.png)<img align="center">
 ## Introduction
 
 'Openface' is a facial recognition deep learning model developed by [Brandon Amos](http://bamos.github.io) and Bartosz Ludwiczuk and Mahadev Satya. OpenFace is an open-source library that rivals the performance and accuracy of proprietary models. This project was created with mobile performance in mind, so let’s look at some of the internals that make this library fast and accurate.
